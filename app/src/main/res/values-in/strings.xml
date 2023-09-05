@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bitaste App</string>
+    <string name="name_people">Hai, Farhan</string>
+    <string name="ads">Apa yang ingin kamu makan hari ini?</string>
+    <string name="discount_50">Diskon 50%</string>
+    <string name="order_your_food_through_my_app_nand_get_your_discount">Pesan makanan Anda melalui aplikasi saya \ndan dapatkan diskon!</string>
+    <string name="rice">Nasi</string>
+    <string name="noodles">Mie</string>
+    <string name="snack">Snack</string>
+    <string name="drink">Minuman</string>
+    <string name="ayam_bakar">Ayam Bakar</string>
+    <string name="rp_50_000">Rp. 50.000</string>
+    <string name="food_menu_list">List Menu Makanan</string>
+    <string name="ayam_goreng">Ayam Goreng</string>
+    <string name="rp_40_000">Rp. 40.000</string>
+    <string name="ayam_geprek">Ayam Geprek</string>
+    <string name="rp_60_000">Rp. 60.000</string>
+    <string name="sate_usus_ayam">Sate Usus Ayam</string>
+    <string name="rp_30_000">Rp. 30.000</string>
+</resources>
