@@ -150,8 +150,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="120dp"
-            android:paddingBottom="10dp">
+            android:paddingTop="160dp">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/cv_menu1"
