@@ -14,8 +14,12 @@
     <string name="food_menu_list">List Menu Makanan</string>
     <string name="ayam_goreng">Ayam Goreng</string>
     <string name="rp_40_000">Rp. 40.000</string>
-    <string name="ayam_geprek">Ayam Geprek</string>
+    <string name="spicy_chicken_wings">Sayap Ayam Pedas</string>
     <string name="rp_60_000">Rp. 60.000</string>
-    <string name="sate_usus_ayam">Sate Usus Ayam</string>
+    <string name="sate_usus_ayam">Sate Ayam</string>
     <string name="rp_30_000">Rp. 30.000</string>
+    <string name="sushi">Sushi</string>
+    <string name="rp_70_000">Rp. 70.000</string>
+    <string name="cheese_spaghetti">Spaghetti Keju</string>
+    <string name="rp_20_000">Rp. 20.000</string>
 </resources>

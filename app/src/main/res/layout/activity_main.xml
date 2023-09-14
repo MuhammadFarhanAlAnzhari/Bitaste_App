@@ -58,7 +58,7 @@
             android:layout_height="26dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="24dp"
-            android:src="@drawable/baseline_language_24"
+            android:src="@drawable/ic_language"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -141,261 +141,146 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <ScrollView
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cv_menu1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_nasi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_banner" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cv_menu2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_mie"
+        app:layout_constraintStart_toEndOf="@id/cv_menu1"
+        app:layout_constraintTop_toBottomOf="@id/cv_banner" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cv_menu3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_snack"
+        app:layout_constraintStart_toEndOf="@id/cv_menu2"
+        app:layout_constraintTop_toBottomOf="@id/cv_banner" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cv_menu4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_minuman"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cv_menu3"
+        app:layout_constraintTop_toBottomOf="@id/cv_banner" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_rice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:text="@string/rice"
+        android:textColor="@color/ungu_tua"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/cv_menu1"
+        app:layout_constraintStart_toStartOf="@id/cv_menu1"
+        app:layout_constraintTop_toBottomOf="@id/cv_menu1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_noodles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:text="@string/noodles"
+        android:textColor="@color/ungu_tua"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/cv_menu2"
+        app:layout_constraintStart_toStartOf="@id/cv_menu2"
+        app:layout_constraintTop_toBottomOf="@id/cv_menu2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_snack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:text="@string/snack"
+        android:textColor="@color/ungu_tua"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/cv_menu3"
+        app:layout_constraintStart_toStartOf="@id/cv_menu3"
+        app:layout_constraintTop_toBottomOf="@id/cv_menu3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_drink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:text="@string/drink"
+        android:textColor="@color/ungu_tua"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/cv_menu4"
+        app:layout_constraintStart_toStartOf="@id/cv_menu4"
+        app:layout_constraintTop_toBottomOf="@id/cv_menu4" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_food_menu_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/food_menu_list"
+        android:textColor="@color/ungu_tua"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_rice" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_grid_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_drink" />
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cl_purple_header">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_food_menu_list">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="160dp">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/cv_menu1"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="14dp"
-                android:src="@drawable/ic_nasi"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/cv_menu2"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="14dp"
-                android:src="@drawable/ic_mie"
-                app:layout_constraintStart_toEndOf="@id/cv_menu1"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/cv_menu3"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="14dp"
-                android:src="@drawable/ic_snack"
-                app:layout_constraintStart_toEndOf="@id/cv_menu2"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/cv_menu4"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="14dp"
-                android:src="@drawable/ic_minuman"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/cv_menu3"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_rice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-4dp"
-                android:text="@string/rice"
-                android:textColor="@color/ungu_tua"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@id/cv_menu1"
-                app:layout_constraintStart_toStartOf="@id/cv_menu1"
-                app:layout_constraintTop_toBottomOf="@id/cv_menu1" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_noodles"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-4dp"
-                android:text="@string/noodles"
-                android:textColor="@color/ungu_tua"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@id/cv_menu2"
-                app:layout_constraintStart_toStartOf="@id/cv_menu2"
-                app:layout_constraintTop_toBottomOf="@id/cv_menu2" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_snack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-4dp"
-                android:text="@string/snack"
-                android:textColor="@color/ungu_tua"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@id/cv_menu3"
-                app:layout_constraintStart_toStartOf="@id/cv_menu3"
-                app:layout_constraintTop_toBottomOf="@id/cv_menu3" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_drink"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-4dp"
-                android:text="@string/drink"
-                android:textColor="@color/ungu_tua"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@id/cv_menu4"
-                app:layout_constraintStart_toStartOf="@id/cv_menu4"
-                app:layout_constraintTop_toBottomOf="@id/cv_menu4" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_food_menu_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="14dp"
-                android:text="@string/food_menu_list"
-                android:textColor="@color/ungu_tua"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_rice" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_list" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
-                android:src="@drawable/baseline_dehaze_24"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_drink" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/iv_ayam_bakar"
-                android:layout_width="170dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="12dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_ayam_bakar"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_food_menu_list" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_ayam_bakar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:text="@string/ayam_bakar"
-                android:textColor="@color/ungu_tua"
-                android:textSize="14dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iv_ayam_bakar" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_price_ab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:text="@string/rp_50_000"
-                android:textColor="@color/orange_muda"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_ayam_bakar" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/iv_ayam_goreng"
-                android:layout_width="170dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="24dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_ayam_goreng"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/iv_ayam_bakar"
-                app:layout_constraintTop_toBottomOf="@id/tv_food_menu_list" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_ayam_goreng"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ayam_goreng"
-                android:textColor="@color/ungu_tua"
-                android:textSize="14dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/iv_ayam_goreng"
-                app:layout_constraintTop_toBottomOf="@id/iv_ayam_goreng" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_price_ag"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/rp_40_000"
-                android:textColor="@color/orange_muda"
-                app:layout_constraintStart_toStartOf="@id/tv_ayam_goreng"
-                app:layout_constraintTop_toBottomOf="@id/tv_ayam_goreng" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/iv_ayam_geprek"
-                android:layout_width="170dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="12dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_ayam_geprek"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_price_ab" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_ayam_geprek"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:text="@string/ayam_geprek"
-                android:textColor="@color/ungu_tua"
-                android:textSize="14dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iv_ayam_geprek" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_price_gprk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:text="@string/rp_60_000"
-                android:textColor="@color/orange_muda"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_ayam_geprek" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/iv_sate_usus_ayam"
-                android:layout_width="170dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="24dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_sate_usus_ayam"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/iv_ayam_geprek"
-                app:layout_constraintTop_toBottomOf="@id/tv_price_ag" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_sate_usus_ayam"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sate_usus_ayam"
-                android:textColor="@color/ungu_tua"
-                android:textSize="14dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/iv_sate_usus_ayam"
-                app:layout_constraintTop_toBottomOf="@id/iv_sate_usus_ayam" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tv_price_sate_usus_ayam"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/rp_30_000"
-                android:textColor="@color/orange_muda"
-                app:layout_constraintStart_toStartOf="@id/iv_sate_usus_ayam"
-                app:layout_constraintTop_toBottomOf="@id/tv_sate_usus_ayam" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+
+
+    </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
