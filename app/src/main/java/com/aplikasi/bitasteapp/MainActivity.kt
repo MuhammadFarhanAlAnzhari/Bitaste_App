@@ -14,18 +14,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val bahasa = findViewById<ShapeableImageView>(R.id.iv_select_language)
-        bahasa.setOnClickListener{
-            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
-        }
-        fetchListData()
-        initRecyclerView()
-    }
-    private fun fetchListData(){
-        binding.rvMenu.adapter=MainAdapter(DataDummy.listData)
-    }
-    private fun initRecyclerView(){
-        binding.rvMenu.layoutManager=GridLayoutManager(this, 2)
-        binding.rvMenu.setHasFixedSize(true)
+//        val bahasa = findViewById<ShapeableImageView>(R.id.iv_select_language)
+//        bahasa.setOnClickListener{
+//            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
+//        }
+//        fetchListData()
+//        initRecyclerView()
+//    }
+//    private fun fetchListData(){
+//        binding.rvMenu.adapter=MainAdapter(DataDummy.listData)
+//    }
+//    private fun initRecyclerView(){
+//        binding.rvMenu.layoutManager=GridLayoutManager(this, 2)
+//        binding.rvMenu.setHasFixedSize(true)
     }
 }

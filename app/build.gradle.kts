@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.aplikasi.bitasteapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.aplikasi.bitasteapp"

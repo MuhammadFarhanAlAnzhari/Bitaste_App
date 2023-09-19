@@ -1,4 +1,6 @@
-package com.aplikasi.bitasteapp
+package com.aplikasi.bitasteapp.Data
+
+import com.aplikasi.bitasteapp.R
 
 object DataDummy {
     private val image= arrayOf(

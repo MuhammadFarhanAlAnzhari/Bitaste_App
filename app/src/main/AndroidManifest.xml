@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BitasteApp"
         tools:targetApi="31">
+
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".MainActivity"
             android:exported="true">
 
             <intent-filter>
@@ -22,10 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"/>
-
 
     </application>
 
