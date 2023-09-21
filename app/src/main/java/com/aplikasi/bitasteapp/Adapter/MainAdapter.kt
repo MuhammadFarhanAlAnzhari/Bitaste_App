@@ -33,6 +33,8 @@ class MainAdapter (private val food: ArrayList<Food>):RecyclerView.Adapter<MainA
             bundle.putString("hargaMenu", nama.price)
             bundle.putDouble("rating", nama.rating)
             bundle.putInt("gambar", nama.image)
+            bundle.putString("loc", nama.location)
+            bundle.putString("description", nama.description)
             Navigation.findNavController(it).navigate(R.id.action_fragmentHome_to_fragmentDetailMenu2, bundle)
         }
     }

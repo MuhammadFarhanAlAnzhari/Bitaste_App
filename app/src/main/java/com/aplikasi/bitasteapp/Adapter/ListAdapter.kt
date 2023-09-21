@@ -27,12 +27,14 @@ class ListAdapter (private val food: ArrayList<Food>): RecyclerView.Adapter<List
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(food[position])
         var nama = food[position]
-        holder.binding.ivMenuImg.setOnClickListener {
+        holder.binding.listMenu.setOnClickListener {
             val bundle = Bundle()
             bundle.putString("namaMenu", nama.name)
             bundle.putString("hargaMenu", nama.price)
             bundle.putDouble("rating", nama.rating)
             bundle.putInt("gambar", nama.image)
+            bundle.putString("loc", nama.location)
+            bundle.putString("description", nama.description)
             Navigation.findNavController(it).navigate(R.id.action_fragmentHome_to_fragmentDetailMenu2, bundle)
         }
     }

@@ -27,5 +27,9 @@
         android:id="@+id/fragmentDetailMenu2"
         android:name="com.aplikasi.bitasteapp.Fragment.FragmentDetailMenu"
         android:label="fragment_detail_menu"
-        tools:layout="@layout/fragment_detail_menu" />
+        tools:layout="@layout/fragment_detail_menu" >
+        <action
+            android:id="@+id/action_fragmentDetailMenu2_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
 </navigation>
