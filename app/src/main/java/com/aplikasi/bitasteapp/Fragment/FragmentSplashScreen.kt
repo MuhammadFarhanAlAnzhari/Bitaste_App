@@ -27,7 +27,7 @@ class FragmentSplashScreen : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Handler().postDelayed({
             findNavController().navigate(R.id.action_fragmentSplashScreen_to_fragmentHome)
-        },300)
+        },2000)
 
     }
 

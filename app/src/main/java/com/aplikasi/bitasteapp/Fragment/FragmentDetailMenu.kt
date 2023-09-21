@@ -49,14 +49,10 @@ class FragmentDetailMenu : Fragment() {
         }
         binding.cvLocation.setOnClickListener {
             val data = binding.dataLocation.text.toString()
-            val uri = Uri.parse("geo:0,0?q=$data")
+            val uri = Uri.parse("https://www.google.com/maps/search/$data")
             val mapIntent = Intent(Intent.ACTION_VIEW,uri)
             startActivity(mapIntent)
         }
     }
-
-//
-
-
 
 }
