@@ -45,14 +45,29 @@ class FragmentDetailMenu : Fragment() {
         Glide.with(requireContext()).load(image).into(binding.ivRectangleImg)
         Glide.with(requireContext()).load(image).into(binding.banner)
         binding.ivBack.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_fragmentDetailMenu2_to_fragmentHome)
+            Navigation.findNavController(it)
+                .navigate(R.id.action_fragmentDetailMenu2_to_fragmentHome)
         }
         binding.cvLocation.setOnClickListener {
             val data = binding.dataLocation.text.toString()
             val uri = Uri.parse("https://www.google.com/maps/search/$data")
-            val mapIntent = Intent(Intent.ACTION_VIEW,uri)
+            val mapIntent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(mapIntent)
         }
+        countingFood()
     }
 
+    private fun countingFood() {
+        var foodTotal = 0
+        binding.cvPlusButton.setOnClickListener {
+            foodTotal += 1
+            binding.tvNumber.text = foodTotal.toString()
+        }
+        binding.cvMinusButton.setOnClickListener {
+            if (foodTotal > 0) {
+                foodTotal -= 1
+                binding.tvNumber.text = foodTotal.toString()
+            }
+        }
+    }
 }
