@@ -1,33 +1,33 @@
-package com.aplikasi.bitasteapp.Adapter
+package com.aplikasi.bitasteapp.adapter
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.aplikasi.bitasteapp.Data.Food
+import com.aplikasi.bitasteapp.data.Food
 import com.aplikasi.bitasteapp.R
-import com.aplikasi.bitasteapp.databinding.ItemListBinding
+import com.aplikasi.bitasteapp.databinding.ItemListDownBinding
+
 import com.bumptech.glide.Glide
 
-
-class MainAdapter (private val food: ArrayList<Food>):RecyclerView.Adapter<MainAdapter.ViewHolder>(){
-    class ViewHolder(var binding: ItemListBinding):RecyclerView.ViewHolder(binding.root){
+class ListAdapter (private val food: ArrayList<Food>): RecyclerView.Adapter<ListAdapter.ViewHolder>(){
+    class ViewHolder(var binding: ItemListDownBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(food: Food){
-            Glide.with(itemView).load(food.image).into(binding.ivMenu)
-            binding.tvNamaMakanan.text=food.name
-            binding.tvPriceFood.text=food.price
-            binding.tvRating.text = food.rating.toString()      }
+            Glide.with(itemView).load(food.image).into(binding.ivMenuImg)
+            binding.tvMenuName.text=food.name
+            binding.tvMenuPrice.text=food.price
+            binding.tvRatingList.text = food.rating.toString()      }
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ItemListBinding.inflate(LayoutInflater.from(parent.context),parent, false)
+        val binding = ItemListDownBinding.inflate(LayoutInflater.from(parent.context),parent, false)
         return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(food[position])
         var nama = food[position]
-        holder.binding.ivMenu.setOnClickListener {
+        holder.binding.listMenu.setOnClickListener {
             val bundle = Bundle()
             bundle.putString("namaMenu", nama.name)
             bundle.putString("hargaMenu", nama.price)
@@ -42,5 +42,4 @@ class MainAdapter (private val food: ArrayList<Food>):RecyclerView.Adapter<MainA
     override fun getItemCount(): Int {
         return food.size
     }
-
 }

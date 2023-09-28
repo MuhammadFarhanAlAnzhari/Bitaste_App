@@ -1,4 +1,4 @@
-package com.aplikasi.bitasteapp.Fragment
+package com.aplikasi.bitasteapp.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,9 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.aplikasi.bitasteapp.Adapter.ListAdapter
-import com.aplikasi.bitasteapp.Adapter.MainAdapter
-import com.aplikasi.bitasteapp.Data.DataDummy
+import com.aplikasi.bitasteapp.adapter.ListAdapter
+import com.aplikasi.bitasteapp.adapter.MainAdapter
+import com.aplikasi.bitasteapp.data.DataDummy
 import com.aplikasi.bitasteapp.databinding.FragmentHomeBinding
 
 

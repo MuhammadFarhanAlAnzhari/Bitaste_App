@@ -1,4 +1,4 @@
-package com.aplikasi.bitasteapp.Data
+package com.aplikasi.bitasteapp.data
 
 import com.aplikasi.bitasteapp.R
 

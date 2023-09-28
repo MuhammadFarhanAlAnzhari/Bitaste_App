@@ -12,8 +12,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
+//        binding=ActivityMainBinding.inflate(layoutInflater)
+//        setContentView(binding.root)
 //        val bahasa = findViewById<ShapeableImageView>(R.id.iv_select_language)
 //        bahasa.setOnClickListener{
 //            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))

@@ -1,4 +1,4 @@
-package com.aplikasi.bitasteapp.Data
+package com.aplikasi.bitasteapp.data
 
 data class Food(val image: Int,
                 val name: String,

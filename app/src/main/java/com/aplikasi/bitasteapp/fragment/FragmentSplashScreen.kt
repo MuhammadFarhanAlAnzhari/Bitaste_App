@@ -1,4 +1,4 @@
-package com.aplikasi.bitasteapp.Fragment
+package com.aplikasi.bitasteapp.fragment
 
 import android.os.Bundle
 import android.os.Handler
