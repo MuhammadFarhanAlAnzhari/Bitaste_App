@@ -73,8 +73,8 @@ class FragmentDetailMenu : Fragment() {
                     RoomEntity(
                         0,
                         menu!!,
-                        image,
-                        price!!,
+                        image,(price!!.replace("[^0-9]".toRegex(), "").toInt()*binding.tvNumber.text.toString().toInt()).toString()
+                        ,
                         stock.toString().toInt()
                     )
                 )

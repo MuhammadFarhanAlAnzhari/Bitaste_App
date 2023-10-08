@@ -25,6 +25,12 @@ class SetViewModel (app: Application) : AndroidViewModel(app){
         val foodDB = FoodDatabase.getInstance(getApplication())!!.roomDao()
         foodDB.deleteData(roomEntity)
     }
+    fun updateCount(stock: Int, id:Int, harga:Int){
+        GlobalScope.launch {
+            val user = FoodDatabase.getInstance(getApplication())!!.roomDao()
+            user.updateStock(stock, id, harga)
+        }
+    }
 
 
     fun insertData(data: RoomEntity){

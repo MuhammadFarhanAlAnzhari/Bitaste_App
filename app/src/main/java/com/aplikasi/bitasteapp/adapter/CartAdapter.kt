@@ -16,6 +16,8 @@ import kotlinx.coroutines.async
 
 class CartAdapter(var listData: List<RoomEntity>): RecyclerView.Adapter<CartAdapter.ViewHolder>() {
     var dbFood: FoodDatabase? = null
+    var plusCount : ((RoomEntity)->Unit)? = null
+    var minCount : ((RoomEntity)->Unit)? = null
     class ViewHolder(var binding: ItemListCartBinding): RecyclerView.ViewHolder(binding.root){
         fun getData(itemData: RoomEntity){
             binding.tvMenuPriceCart.text = itemData.harga
@@ -38,6 +40,17 @@ class CartAdapter(var listData: List<RoomEntity>): RecyclerView.Adapter<CartAdap
 
     override fun onBindViewHolder(holder: CartAdapter.ViewHolder, position: Int) {
         holder.getData(listData[position])
+        holder.binding.btnMinus.setOnClickListener {
+            val num = holder.binding.number.text.toString().toInt()
+            if(num - 1 != 0){
+                minCount?.invoke(listData[position])
+                holder.binding.number.text="${num-1}"
+            }
+        }
+        holder.binding.btnPlus.setOnClickListener {
+            plusCount?.invoke(listData[position])
+            holder.binding.number.text="${1+holder.binding.number.text.toString().toInt()}"
+        }
         holder.binding.deleteCart.setOnClickListener{
             dbFood = FoodDatabase.getInstance(it.context)
             GlobalScope.async {
@@ -49,5 +62,6 @@ class CartAdapter(var listData: List<RoomEntity>): RecyclerView.Adapter<CartAdap
     }
     fun setData(listData: ArrayList<RoomEntity>){
         this.listData=listData
+        notifyDataSetChanged()
     }
 }

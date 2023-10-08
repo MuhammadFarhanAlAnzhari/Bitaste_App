@@ -11,6 +11,7 @@ import com.aplikasi.bitasteapp.databinding.FragmentProfileBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
+@Suppress("DEPRECATION")
 class FragmentProfile : Fragment() {
     lateinit var binding: FragmentProfileBinding
     override fun onCreateView(
@@ -29,6 +30,29 @@ class FragmentProfile : Fragment() {
 
         binding.ivBackProfile.setOnClickListener {
             findNavController().navigateUp()
+        }
+
+        binding.bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.bottom_ic_home -> {
+                    // Navigasi ke FragmentHome
+                    findNavController().navigate(R.id.fragmentHome)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.bottom_ic_profile -> {
+                    // Navigasi ke FragmentProfile
+                    findNavController().navigate(R.id.fragmentProfile)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.bottom_ic_cart -> {
+                    // Navigasi ke FragmentCart
+                    findNavController().navigate(R.id.fragmentCart)
+                    return@setOnNavigationItemSelectedListener true
+                }
+
+                else -> false
+            }
+
         }
 
 
