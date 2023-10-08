@@ -1,4 +1,4 @@
-package com.aplikasi.bitasteapp.fragment
+package com.aplikasi.bitasteapp.presentation.splashscreen
 
 import android.os.Bundle
 import android.os.Handler
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.aplikasi.bitasteapp.R
 import com.aplikasi.bitasteapp.databinding.FragmentSplashScreenBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class FragmentSplashScreen : Fragment() {
@@ -25,6 +26,8 @@ class FragmentSplashScreen : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val bottomNav = requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNav.visibility = View.GONE
         Handler().postDelayed({
             findNavController().navigate(R.id.action_fragmentSplashScreen_to_fragmentHome)
         },2000)

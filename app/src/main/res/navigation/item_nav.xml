@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentSplashScreen"
-        android:name="com.aplikasi.bitasteapp.fragment.FragmentSplashScreen"
+        android:name="com.aplikasi.bitasteapp.presentation.splashscreen.FragmentSplashScreen"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen" >
         <action
@@ -16,20 +16,49 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentHome"
-        android:name="com.aplikasi.bitasteapp.fragment.FragmentHome"
+        android:name="com.aplikasi.bitasteapp.presentation.home.FragmentHome"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_fragmentHome_to_fragmentDetailMenu2"
             app:destination="@id/fragmentDetailMenu2" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+        <action
+            android:id="@+id/action_fragmentHome_self"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentCart"
+            app:destination="@id/fragmentCart" />
     </fragment>
     <fragment
         android:id="@+id/fragmentDetailMenu2"
-        android:name="com.aplikasi.bitasteapp.fragment.FragmentDetailMenu"
+        android:name="com.aplikasi.bitasteapp.presentation.detailmenu.FragmentDetailMenu"
         android:label="fragment_detail_menu"
         tools:layout="@layout/fragment_detail_menu" >
         <action
             android:id="@+id/action_fragmentDetailMenu2_to_fragmentHome"
             app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragmentDetailMenu2_to_fragmentCart"
+            app:destination="@id/fragmentCart" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="com.aplikasi.bitasteapp.presentation.profile.FragmentProfile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/fragmentCart"
+        android:name="com.aplikasi.bitasteapp.presentation.cart.FragmentCart"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_fragmentCart_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragmentCart_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
     </fragment>
 </navigation>

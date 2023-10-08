@@ -13,10 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BitasteApp"
-        tools:targetApi="31">
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
+        tools:targetApi="34">
         <activity
             android:name=".MainActivity"
             android:exported="true">

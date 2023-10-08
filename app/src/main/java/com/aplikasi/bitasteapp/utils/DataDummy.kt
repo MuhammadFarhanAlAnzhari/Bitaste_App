@@ -1,6 +1,7 @@
-package com.aplikasi.bitasteapp.data
+package com.aplikasi.bitasteapp.utils
 
 import com.aplikasi.bitasteapp.R
+import com.aplikasi.bitasteapp.data.Food
 
 object DataDummy {
     private val image= arrayOf(
