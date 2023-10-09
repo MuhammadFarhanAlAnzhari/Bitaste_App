@@ -81,12 +81,12 @@ class FragmentCart : Fragment() {
                 val hargaAwal = item.harga.replace("[^0-9]".toRegex(), "").toInt() / item.stock
                 val totalHargaSementara = item.harga.replace("[^0-9]".toRegex(), "").toInt()
                 val hargaBaru = hargaAwal * (item.stock + 1)
-                totalHarga += hargaBaru - totalHargaSementara // Tambah selisih harga baru dan harga sementara
+                totalHarga += hargaBaru - totalHargaSementara
                 cartViewModel.updateCount(item.stock + 1, item.id, hargaBaru)
                 cartViewModel.getAllData()
 
                 activity?.runOnUiThread {
-                    val tvTotalPrice = view.findViewById<TextView>(R.id.tv_total_price) // Ganti dengan ID TextView yang sesuai
+                    val tvTotalPrice = view.findViewById<TextView>(R.id.tv_total_price)
                     tvTotalPrice.text = "Rp. $totalHarga"
                 }
             }
