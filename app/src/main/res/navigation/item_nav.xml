@@ -6,6 +6,18 @@
     app:startDestination="@id/fragmentSplashScreen">
 
     <fragment
+        android:id="@+id/confirmFragment"
+        android:name="com.aplikasi.bitasteapp.presentation.popup.PopupFragment"
+        android:label="fragment_confirm"
+        tools:layout="@layout/fragment_popup_success">
+        <action
+            android:id="@+id/action_confirmFragment_to_homeFragment"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_confirmFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
         android:id="@+id/fragmentSplashScreen"
         android:name="com.aplikasi.bitasteapp.presentation.splashscreen.FragmentSplashScreen"
         android:label="fragment_splash_screen"
@@ -60,5 +72,8 @@
         <action
             android:id="@+id/action_fragmentCart_to_fragmentProfile"
             app:destination="@id/fragmentProfile" />
+        <action
+            android:id="@+id/action_fragmentCart_to_confirmFragment"
+            app:destination="@id/confirmFragment" />
     </fragment>
 </navigation>

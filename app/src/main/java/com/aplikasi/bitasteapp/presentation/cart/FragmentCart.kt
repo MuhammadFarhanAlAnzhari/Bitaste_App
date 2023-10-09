@@ -1,6 +1,8 @@
 package com.aplikasi.bitasteapp.presentation.cart
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -96,18 +98,25 @@ class FragmentCart : Fragment() {
                 val totalHargaSementara = item.harga.replace("[^0-9]".toRegex(), "").toInt()
                 if (item.stock > 1) {
                     val hargaBaru = hargaAwal * (item.stock - 1)
-                    totalHarga += hargaBaru - totalHargaSementara // Tambah selisih harga baru dan harga sementara
+                    totalHarga += hargaBaru - totalHargaSementara
                     cartViewModel.updateCount(item.stock - 1, item.id, hargaBaru)
                     cartViewModel.getAllData()
 
                     activity?.runOnUiThread {
-                        val tvTotalPrice = view.findViewById<TextView>(R.id.tv_total_price) // Ganti dengan ID TextView yang sesuai
+                        val tvTotalPrice = view.findViewById<TextView>(R.id.tv_total_price)
                         tvTotalPrice.text = "Rp. $totalHarga"
                     }
                 }
             }
         }
+        binding.btnOrder.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentCart_to_confirmFragment)
+            Handler().postDelayed({
+                findNavController().navigate(R.id.fragmentHome)
+            }, 1000)
+        }
     }
+
 
     fun setVM() {
         cartAdapter = CartAdapter(ArrayList())

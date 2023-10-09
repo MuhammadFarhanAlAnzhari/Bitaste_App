@@ -70,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Rp. 50.000"
+        android:text="Rp. 0"
         android:textColor="@color/orange_tua"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
@@ -88,13 +88,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_next"
+        android:id="@+id/btn_order"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="265dp"
         android:layout_margin="20dp"
         android:backgroundTint="@color/ungu_muda"
-        android:text="Next"
+        android:text="Order"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent" />
 
